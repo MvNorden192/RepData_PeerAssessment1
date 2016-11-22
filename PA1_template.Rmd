@@ -103,9 +103,9 @@ names(daily_int_weekend) <- c("Interval", "Steps_weekday")
 daily_int_total <- merge(daily_int_weekday,daily_int_weekend, by = "Interval")
 names(daily_int_total) <- c("Interval","Steps_weekday", "Steps_weekend")
 
-par(mfrow=c(2,1), mar = c(2,2,1.5,1.5))
-plot(data = daily_int_total, Steps_weekend ~ Interval, col = "seagreen", ylab = "Steps", main = "Weekend", lwd = 1, type = "l", ylim = range(Steps_weekend, Steps_weekday))
-plot(data = daily_int_total, Steps_weekday ~ Interval, col = "royalblue", ylab = "Steps",main= "Weekday", type = "l", ylim = range(Steps_weekend, Steps_weekday))
+par(mfrow=c(2,1), mar = c(4,3.8,2.6,2.6)) # c(2.7,2.7,1.8,1.8))
+plot(data = daily_int_total, Steps_weekend ~ Interval, col = "seagreen", ylab = "Steps", main = "Weekend", cex.main = 1, cex.lab = 0.85, lwd = 1, type = "l", ylim = range(Steps_weekend, Steps_weekday))
+plot(data = daily_int_total, Steps_weekday ~ Interval, col = "royalblue", ylab = "Steps",main= "Weekday", cex.main = 1, cex.lab = 0.85, type = "l", ylim = range(Steps_weekend, Steps_weekday))
 ```
 
 
